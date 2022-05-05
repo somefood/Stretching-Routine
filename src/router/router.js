@@ -1,22 +1,20 @@
-import { Route } from "react-router-dom";
-import NotFound from "../pages/NotFound";
-import SignIn from "../pages/Sign";
-import Main from "../pages/Main";
+import NotFound from '../pages/NotFound';
+import SignIn from '../pages/Sign';
+import Main from '../pages/Main';
 
 const routePage = [
     {
         pathName: '/',
-        component: <SignIn />
+        component: <SignIn />,
     },
     {
         pathName: '/main',
-        component: <Main />
+        component: <Main />,
     },
     {
         pathName: '*',
-        component: <NotFound />
+        component: <NotFound />,
     },
-]
+];
 
-
-export default routePage
+export default routePage;

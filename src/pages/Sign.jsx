@@ -1,8 +1,7 @@
-import SignIn from "../components/Sign";
-
+import SignIn from '../components/Sign';
 
 const SignPage = () => {
-    return <SignIn />
+    return <SignIn />;
 };
 
-export default SignPage
+export default SignPage;

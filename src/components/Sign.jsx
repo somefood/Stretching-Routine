@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
-import { loginInfo } from '../api/dummy';
+import API from '../api/index';
 
 function Copyright(props) {
     return (
@@ -40,7 +40,7 @@ export default function SignIn() {
             email: data.get('email'),
             password: data.get('password'),
         });
-        const check = loginInfo({ id: data.get('email'), password: data.get('password') });
+        const check = API?.Login?.login({ id: data.get('email'), password: data.get('password') });
         if (check) {
             navigate('/main');
         } else {
@@ -76,6 +76,7 @@ export default function SignIn() {
                             name="email"
                             autoComplete="email"
                             autoFocus
+                            defaultValue={'lhs'}
                         />
                         <TextField
                             margin="normal"
@@ -86,6 +87,7 @@ export default function SignIn() {
                             type="password"
                             id="password"
                             autoComplete="current-password"
+                            defaultValue={'lhs'}
                         />
                         <FormControlLabel
                             control={<Checkbox value="remember" color="primary" />}

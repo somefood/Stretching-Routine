@@ -1,11 +1,9 @@
-import axios from 'axios';
+import Login from './login';
+import Test from './test';
 
-const 처음로딩 = () => {
-    return new Promise((r, rj) => {
-        setTimeout(() => {
-            r('통신 중');
-        }, 500);
-    });
+const API = {
+    Login,
+    Test,
 };
 
-export { 처음로딩 };
+export default API;
